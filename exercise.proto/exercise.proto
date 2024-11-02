@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message StudentMessage {
+    enum Type {
+       UNKNOWN = 0;
+       PROBLEM_REQUEST = 1;
+       PROBLEM_RESULT = 2;
+    }
+
+    Type type = 1;
+    string student_id = 2;  // jane.doe for jane.doe@alu.uclm.es
+    int32 result = 3;
+}
+
+message ServerResponse {
+    repeated string colors = 1;
+}
